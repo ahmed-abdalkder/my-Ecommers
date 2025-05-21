@@ -44,10 +44,10 @@ const products= data?.data?.products || []
 {products?.map((product)=>(
 
 
-<div key={product._id} className="w-full max-w-sm bg-gray border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+<div key={product._id} className="w-full max-w-sm bg-gray border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 transition duration-300 ease-in-out hover:scale-105">
   <Link to={`/productDetails/${product._id}`}>
    
-   <div className="p-6 m-1 rounded-md bg-gray-100">
+   <div className="p-6 m-1 rounded-md bg-gray-100 ">
     <img className='w-full h-[200px]'  src={product.coverimages[0]?.secure_url} alt="product image" />
  
 <div className='flex items-center justify-between'>
@@ -62,7 +62,7 @@ const products= data?.data?.products || []
      <button onClick={((e)=>{
       e.preventDefault()
       callAddCart(product._id)
-     })} ><img className='w-8 h-8' src={cartIcon} alt="cart" /></button>
+     })} ><img className='w-8 h-8 transition duration-300 ease-in-out hover:scale-105 hover:shadow-[0_5px_5px_0] relative z-10  hover:bg-green-300' src={cartIcon} alt="cart" /></button>
     </div> 
  </div>
   <div className="px-5 pb-5">
