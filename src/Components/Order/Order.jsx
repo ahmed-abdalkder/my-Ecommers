@@ -30,7 +30,7 @@ function Order() {
         .then( async(res)=>{
              
              if (res.data.url) {
-        window.location.href = res.data.url; 
+        window.open(res.data.url); 
       
       
       } else {
