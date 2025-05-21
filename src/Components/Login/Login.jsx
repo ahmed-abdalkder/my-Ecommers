@@ -20,7 +20,7 @@ const navigate = useNavigate()
     })
 
     function login(values){
-        axios.post('https://e-commerce-inky-pi.vercel.app/users/signin',values)
+        axios.post('https://e-commerce-five-beta-63.vercel.app/users/signin',values)
         .then((res)=>{
             console.log(res.data.token);
             const newToken =res.data.token

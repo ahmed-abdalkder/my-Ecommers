@@ -26,7 +26,7 @@ function Order() {
 
 
    function addOrder(values){
-        axios.post('https://e-commerce-inky-pi.vercel.app/orders',values,{headers:{token}})
+        axios.post('https://e-commerce-five-beta-63.vercel.app/orders',values,{headers:{token}})
         .then( async(res)=>{
              
              if (res.data.url) {

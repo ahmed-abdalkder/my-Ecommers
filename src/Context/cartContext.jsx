@@ -15,7 +15,7 @@ function CartContextProvider({children}) {
        
 
    async function addToCart(productId ,quantity = 1){
-      const res= await axios.post('https://e-commerce-inky-pi.vercel.app/carts',{productId,quantity},{
+      const res= await axios.post('https://e-commerce-five-beta-63.vercel.app/carts',{productId,quantity},{
             headers:{token}})
          .then((res)=>{
      console.log(res.data.carts);
@@ -30,7 +30,7 @@ function CartContextProvider({children}) {
     }
 
     function getcart(){
-        axios.get('https://e-commerce-inky-pi.vercel.app/carts/getCart',{
+        axios.get('https://e-commerce-five-beta-63.vercel.app/carts/getCart',{
             headers:{token}
         }).then((res)=>{
             
@@ -49,7 +49,7 @@ function CartContextProvider({children}) {
     },[token])
 
     function updateCart(productId,count){
-        axios.put('https://e-commerce-inky-pi.vercel.app/carts',{productId,'count':count},{headers:{token}})
+        axios.put('https://e-commerce-five-beta-63.vercel.app/carts',{productId,'count':count},{headers:{token}})
          .then((res)=>{
                     
             getcart()
@@ -59,7 +59,7 @@ function CartContextProvider({children}) {
          })
     }
     function deleteCart(id){
-        axios.delete(`https://e-commerce-inky-pi.vercel.app/carts/${id}`,{headers:{token}})
+        axios.delete(`https://e-commerce-five-beta-63.vercel.app/carts/${id}`,{headers:{token}})
          .then((res)=>{
              getcart()
          }).catch((err)=>{
@@ -68,7 +68,7 @@ function CartContextProvider({children}) {
          })
     }
     async function clearCart(){
-     const res= await axios.put('https://e-commerce-inky-pi.vercel.app/carts/clear',{},{headers:{token}})
+     const res= await axios.put('https://e-commerce-five-beta-63.vercel.app/carts/clear',{},{headers:{token}})
         setProducts([])
     }
     return (

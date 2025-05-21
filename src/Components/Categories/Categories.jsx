@@ -22,7 +22,7 @@ function Categories() {
     
   };
      function getcategory(){
-        return axios.get('https://e-commerce-inky-pi.vercel.app/categories')
+        return axios.get('https://e-commerce-five-beta-63.vercel.app/categories')
      }
      const{data,isError,isLoading}=useQuery({
         queryKey:['categories'],
