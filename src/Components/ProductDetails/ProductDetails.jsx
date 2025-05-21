@@ -7,7 +7,7 @@ import { ClipLoader } from 'react-spinners'
 function ProductDetails() {
    const{ id } = useParams()
     function getProduct(){
-        return axios.get(`https://e-commerce-five-beta-63.vercel.app/products/Product/${id}`)
+        return axios.get(`https://e-commerce-red-rho-36.vercel.app/products/Product/${id}`)
     }
     const{data,isError,isLoading}=useQuery({
         queryKey:['product',id],

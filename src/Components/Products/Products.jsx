@@ -11,7 +11,7 @@ import { cartContext } from '../../Context/cartContext';
 function Products() {
   const{addToCart}=useContext(cartContext)
     function getAllproductes(){
-      return  axios.get('https://e-commerce-five-beta-63.vercel.app/products/getAllProducts')
+      return  axios.get('https://e-commerce-red-rho-36.vercel.app/products/getAllProducts')
              
     }
     function callAddCart(id){

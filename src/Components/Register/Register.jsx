@@ -33,7 +33,7 @@ const Navigate = useNavigate()
     })
  
     function register(values){
-        axios.post('https://e-commerce-five-beta-63.vercel.app/users',values)
+        axios.post('https://e-commerce-red-rho-36.vercel.app/users',values)
         .then((user)=>{
             console.log(user);
           Navigate('/login')  
