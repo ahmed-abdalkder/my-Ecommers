@@ -44,7 +44,7 @@ const navigate = useNavigate()
        
 <>
 {(isError || issuccess) && (
-  <div className="fixed top-15 left-5 z-50 w-fit">
+  <div className="fixed top-5 left-4 right-4 z-50 max-w-sm mx-auto">
     {isError && (
       <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
         {isError}
@@ -52,24 +52,49 @@ const navigate = useNavigate()
     )}
     {issuccess && (
       <div className="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
-         Congratilation
+        Congratulation
       </div>
     )}
   </div>
 )}
 
-<form onSubmit={formik.handleSubmit}  className="max-w-sm mx-auto py-32">
-<h1 className='pb-4 text-xl text-green-500'>Login Now :</h1>
+<form onSubmit={formik.handleSubmit} className="w-full max-w-sm mx-auto px-4 py-16 sm:px-6 lg:px-8">
+  <h1 className="pb-4 text-xl text-green-500 text-center">Login Now :</h1>
+
   <div className="mb-5">
-    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> email</label>
-    <input onChange={formik.handleChange} value={formik.values.email} type="email" id="email" className="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" placeholder="email" required />
+    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+    <input
+      onChange={formik.handleChange}
+      value={formik.values.email}
+      type="email"
+      id="email"
+      className="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+      placeholder="Email"
+      required
+    />
   </div>
+
   <div className="mb-5">
-    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"> password</label>
-    <input onChange={formik.handleChange} value={formik.values.password}  type="password" id="password" className="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-xs-light" placeholder="password" required />
+    <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+    <input
+      onChange={formik.handleChange}
+      value={formik.values.password}
+      type="password"
+      id="password"
+      className="shadow-xs bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+      placeholder="Password"
+      required
+    />
   </div>
-  <button type="submit" className="text-white bg-green-500 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Login</button>
+
+  <button
+    type="submit"
+    className="w-full text-white bg-green-500 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+  >
+    Login
+  </button>
 </form>
+
 </>
     )
 }
