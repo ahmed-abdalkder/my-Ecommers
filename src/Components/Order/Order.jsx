@@ -43,7 +43,7 @@ function Order() {
             
         })
     }
-    
+   return(
 
     <form onSubmit={formik.handleSubmit} className="max-w-md mx-auto py-8 px-4">
   <div className="relative z-0 w-full mb-5 group">
@@ -130,7 +130,7 @@ function Order() {
     </button>
   </div>
 </form>
-
+) 
 }
  export default Order
 
