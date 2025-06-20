@@ -4,14 +4,22 @@ import { AuthContext } from '../../Context/AuthContext'
 import { FaShoppingCart } from 'react-icons/fa'
 import { cartContext } from '../../Context/cartContext'
 import cartImag from '../../assets/images/freshcart-logo.svg'
+
 function Navbar() {
   const{numOfCartItems}=useContext(cartContext)
   const navigate = useNavigate()
   const{token,setToken}=useContext(AuthContext)
-function logout(){
-  localStorage.removeItem('toky')
-  setToken(null)
-  navigate('/login')
+ 
+function logout() {
+  localStorage.removeItem("toky");
+  setToken(null);
+  navigate('/login');
+
+  const url = new URL(window.location.href);
+  url.searchParams.delete("token");
+  window.history.replaceState({}, document.title, url.pathname);
+
+  window.location.reload();
 }
     return (
  
